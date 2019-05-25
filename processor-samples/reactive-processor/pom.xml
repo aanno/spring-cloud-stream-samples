@@ -54,6 +54,9 @@
         </profile>
         <profile>
             <id>rabbit-binder</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <dependencies>
                 <dependency>
                     <groupId>org.springframework.cloud</groupId>

@@ -5,27 +5,33 @@ spring:
         output:
           destination: transformed
           #binder: local_rabbit
-          binder: local_kafka
+          #binder: local_kafka
+          binder: ${BINDER}
           consumer:
             max-attempts: 3
             # retry-template-name: whatever
         test-sink:
           destination: transformed
           #binder: local_rabbit
-          binder: local_kafka
+          #binder: local_kafka
+          binder: ${BINDER}
         input:
           destination: testtock
           #binder: local_rabbit
-          binder: local_kafka
+          #binder: local_kafka
+          binder: ${BINDER}
         test-source:
           destination: testtock
           #binder: local_rabbit
-          binder: local_kafka
+          #binder: local_kafka
+          binder: ${BINDER}
       binders:
         local_kafka:
+          defaultCandidate: false
           type: kafka
-#        local_rabbit:
-#          type: rabbit
+        local_rabbit:
+          defaultCandidate: false
+          type: rabbit
       rabbit:
         bindings:
           local_rabbit:
