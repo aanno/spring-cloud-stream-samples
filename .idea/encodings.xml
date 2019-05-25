@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kafka-streams-samples/kafka-streams-aggregate" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kafka-streams-samples/kafka-streams-branching" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kafka-streams-samples/kafka-streams-dlq-sample" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kafka-streams-samples/kafka-streams-global-table-join" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kafka-streams-samples/kafka-streams-interactive-query-advanced" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kafka-streams-samples/kafka-streams-interactive-query-basic" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kafka-streams-samples/kafka-streams-message-channel" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kafka-streams-samples/kafka-streams-product-tracker" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kafka-streams-samples/kafka-streams-table-join" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kafka-streams-samples/kafka-streams-to-rabbitmq-message-channel" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kafka-streams-samples/kafka-streams-word-count" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kinesis-samples/kinesis-produce-consume" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kinesis-samples/kinesis-to-webflux" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/multi-io-samples/multi-io" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/multibinder-samples/kafka-multibinder-jaas" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/multibinder-samples/multibinder-kafka-rabbit" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/multibinder-samples/multibinder-kafka-streams" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/multibinder-samples/multibinder-two-kafka-clusters" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/partitioning-samples/partitioning-consumer-sample-kafka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/partitioning-samples/partitioning-consumer-sample-rabbit" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/partitioning-samples/partitioning-producer-sample" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/processor-samples/polled-consumer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/processor-samples/reactive-processor" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/processor-samples/sensor-average-reactive" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/processor-samples/streamlistener-basic" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/processor-samples/uppercase-transformer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/samples-e2e-tests" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/schema-registry-samples/kafka-streams-schema-evolution/custom-confluent-producer1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/schema-registry-samples/kafka-streams-schema-evolution/custom-confluent-producer2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/schema-registry-samples/kafka-streams-schema-evolution/kafka-streams-confluent-consumer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/schema-registry-samples/schema-registry-confluent/schema-registry-confluent-consumer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/schema-registry-samples/schema-registry-confluent/schema-registry-confluent-producer1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/schema-registry-samples/schema-registry-confluent/schema-registry-confluent-producer2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/schema-registry-samples/schema-registry-vanilla/kafka-streams-consumer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/schema-registry-samples/schema-registry-vanilla/schema-registry-vanilla-consumer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/schema-registry-samples/schema-registry-vanilla/schema-registry-vanilla-producer1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/schema-registry-samples/schema-registry-vanilla/schema-registry-vanilla-producer2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/schema-registry-samples/schema-registry-vanilla/schema-registry-vanilla-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sink-samples/jdbc-sink" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/source-samples/dynamic-destination-source" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/source-samples/jdbc-source" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testing-samples/test-embedded-kafka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testing-samples/testing-demo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/transaction-kafka-samples/transaction-http-source" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/transaction-kafka-samples/transaction-logger-sink" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/transaction-kafka-samples/transaction-spring-data-processor" charset="UTF-8" />
+  </component>
+</project>

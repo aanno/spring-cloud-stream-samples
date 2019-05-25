@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="kafka-streams-global-table-join" />
+        <module name="kafka-multibinder-jaas" />
+        <module name="kafka-streams-message-channel" />
+        <module name="partitioning-producer-sample" />
+        <module name="kafka-streams-consumer" />
+        <module name="partitioning-consumer-sample-kafka" />
+        <module name="multibinder-kafka-rabbit" />
+        <module name="schema-registry-vanilla-consumer" />
+        <module name="transaction-logger-sink" />
+        <module name="kafka-streams-aggregate" />
+        <module name="multibinder-two-kafka-clusters" />
+        <module name="transaction-http-source" />
+        <module name="kafka-streams-confluent-consumer" />
+        <module name="kafka-streams-interactive-query-basic" />
+        <module name="kafka-streams-branching" />
+        <module name="schema-registry-vanilla-producer1" />
+        <module name="test-embedded-kafka" />
+        <module name="dynamic-destination-source" />
+        <module name="reactive-processor" />
+        <module name="kinesis-to-webflux" />
+        <module name="multi-io" />
+        <module name="schema-registry-vanilla-producer2" />
+        <module name="polled-consumer" />
+        <module name="streamlistener-basic" />
+        <module name="sample-jdbc-source" />
+        <module name="kafka-streams-table-join" />
+        <module name="uppercase-transformer" />
+        <module name="transaction-spring-data-processor" />
+        <module name="sensor-average-reactive" />
+        <module name="kafka-streams-to-rabbitmq-message-channel" />
+        <module name="kafka-streams-product-tracker" />
+        <module name="multibinder-kafka-streams" />
+        <module name="kinesis-produce-consume" />
+        <module name="kafka-streams-word-count" />
+        <module name="kafka-streams-interactive-query-advanced" />
+        <module name="schema-registry-vanilla-server" />
+        <module name="samples-e2e-tests" />
+        <module name="partitioning-consumer-sample-rabbit" />
+        <module name="custom-confluent-producer2" />
+        <module name="custom-confluent-producer1" />
+        <module name="schema-registry-confluent-producer2" />
+        <module name="schema-registry-confluent-producer1" />
+        <module name="testing-demo" />
+        <module name="schema-registry-confluent-consumer" />
+        <module name="sample-jdbc-sink" />
+        <module name="kafka-streams-dlq-sample" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="custom-confluent-producer1" options="-parameters" />
+      <module name="custom-confluent-producer2" options="-parameters" />
+      <module name="dynamic-destination-source" options="-parameters" />
+      <module name="kafka-multibinder-jaas" options="-parameters" />
+      <module name="kafka-streams-aggregate" options="-parameters" />
+      <module name="kafka-streams-branching" options="-parameters" />
+      <module name="kafka-streams-confluent-consumer" options="-parameters" />
+      <module name="kafka-streams-consumer" options="-parameters" />
+      <module name="kafka-streams-dlq-sample" options="-parameters" />
+      <module name="kafka-streams-global-table-join" options="-parameters" />
+      <module name="kafka-streams-interactive-query-advanced" options="-parameters" />
+      <module name="kafka-streams-interactive-query-basic" options="-parameters" />
+      <module name="kafka-streams-message-channel" options="-parameters" />
+      <module name="kafka-streams-product-tracker" options="-parameters" />
+      <module name="kafka-streams-table-join" options="-parameters" />
+      <module name="kafka-streams-to-rabbitmq-message-channel" options="-parameters" />
+      <module name="kafka-streams-word-count" options="-parameters" />
+      <module name="kinesis-produce-consume" options="-parameters" />
+      <module name="kinesis-to-webflux" options="-parameters" />
+      <module name="multi-io" options="-parameters" />
+      <module name="multibinder-kafka-rabbit" options="-parameters" />
+      <module name="multibinder-kafka-streams" options="-parameters" />
+      <module name="multibinder-two-kafka-clusters" options="-parameters" />
+      <module name="partitioning-consumer-sample-kafka" options="-parameters" />
+      <module name="partitioning-consumer-sample-rabbit" options="-parameters" />
+      <module name="partitioning-producer-sample" options="-parameters" />
+      <module name="polled-consumer" options="-parameters" />
+      <module name="reactive-processor" options="-parameters" />
+      <module name="sample-jdbc-sink" options="-parameters" />
+      <module name="sample-jdbc-source" options="-parameters" />
+      <module name="samples-e2e-tests" options="-parameters" />
+      <module name="schema-registry-confluent-consumer" options="-parameters" />
+      <module name="schema-registry-confluent-producer1" options="-parameters" />
+      <module name="schema-registry-confluent-producer2" options="-parameters" />
+      <module name="schema-registry-vanilla-consumer" options="-parameters" />
+      <module name="schema-registry-vanilla-producer1" options="-parameters" />
+      <module name="schema-registry-vanilla-producer2" options="-parameters" />
+      <module name="schema-registry-vanilla-server" options="-parameters" />
+      <module name="sensor-average-reactive" options="-parameters" />
+      <module name="streamlistener-basic" options="-parameters" />
+      <module name="test-embedded-kafka" options="-parameters" />
+      <module name="testing-demo" options="-parameters" />
+      <module name="transaction-http-source" options="-parameters" />
+      <module name="transaction-logger-sink" options="-parameters" />
+      <module name="transaction-spring-data-processor" options="-parameters" />
+      <module name="uppercase-transformer" options="-parameters" />
+    </option>
+  </component>
+</project>
