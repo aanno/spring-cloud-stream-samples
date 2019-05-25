@@ -67,12 +67,12 @@ public class ReactiveProcessorApplication {
 		}
 	}
 
-	public interface Sink {
+	public static interface Sink {
 		@Input("test-sink")
 		SubscribableChannel sampleSink();
 	}
 
-	public interface Source {
+	public static interface Source {
 		@Output("test-source")
 		MessageChannel sampleSource();
 	}
