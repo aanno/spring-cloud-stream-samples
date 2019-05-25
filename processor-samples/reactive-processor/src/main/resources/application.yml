@@ -4,9 +4,28 @@ spring:
       bindings:
         output:
           destination: transformed
+          binder: local_rabbit
         test-sink:
           destination: transformed
+          binder: local_rabbit
         input:
           destination: testtock
+          binder: local_rabbit
         test-source:
           destination: testtock
+          binder: local_rabbit
+      binders:
+        local_kafka:
+          type: kafka
+        local_rabbit:
+          type: rabbit
+      rabbit:
+        bindings:
+          local_rabbit:
+            consumer:
+              max-length: 100
+              prefetch: 1
+            producer:
+              max-length: 100
+              batching-enabled: false
+              batch-size: 100

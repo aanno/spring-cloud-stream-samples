@@ -27,6 +27,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 @EnableBinding(Processor.class)
 public class ReactiveProcessorApplication {
 
+	private static final double AGGREGATE_ERROR_PROP = 0.0d;
+	private static final double INPUT_ERROR_PROP = 0.0d;
 	private static final double OUTPUT_ERROR_PROP = 0.0d;
 
 	private static Random RANDOM = new Random(2728726262L);
@@ -42,8 +44,8 @@ public class ReactiveProcessorApplication {
 				log()
 				.window(Duration.ofSeconds(5), Duration.ofSeconds(5))
 				.flatMap(w -> {
-					if (RANDOM.nextDouble() < OUTPUT_ERROR_PROP) {
-						return w.error(new IllegalStateException("On " + w));
+					if (RANDOM.nextDouble() < AGGREGATE_ERROR_PROP) {
+						return w.error(new IllegalStateException("Aggregate on " + w));
 					}
 					return w.reduce("", (s1,s2)->s1+s2);
 				})
@@ -65,6 +67,9 @@ public class ReactiveProcessorApplication {
 		@InboundChannelAdapter(channel = "test-source", poller = @Poller(fixedDelay = "1000"))
 		public MessageSource<String> sendTestData() {
 			return () -> {
+				if (RANDOM.nextDouble() < INPUT_ERROR_PROP) {
+					throw new IllegalStateException("SendTestData on " + count.get());
+				}
 				StringBuilder sb = new StringBuilder();
 				sb.append(this.semaphore.getAndSet(!this.semaphore.get()) ? "foo" : "bar")
 						.append(count.getAndIncrement())
@@ -81,6 +86,9 @@ public class ReactiveProcessorApplication {
 
 		@StreamListener("test-sink")
 		public void receive(String payload) {
+			if (RANDOM.nextDouble() < OUTPUT_ERROR_PROP) {
+				throw new IllegalStateException("Receive on " + payload);
+			}
 			logger.info("Data received: " + payload);
 		}
 	}
