@@ -15,8 +15,8 @@ spring:
           destination: testtock
           binder: local_rabbit
       binders:
-        local_kafka:
-          type: kafka
+#        local_kafka:
+#          type: kafka
         local_rabbit:
           type: rabbit
       rabbit:
@@ -25,7 +25,12 @@ spring:
             consumer:
               max-length: 100
               prefetch: 1
+              requeue-rejected: true
+              republish-to-dlq: true
+              auto-bind-dlq: true
             producer:
               max-length: 100
               batching-enabled: false
               batch-size: 100
+              transacted: true
+              auto-bind-dlq: true

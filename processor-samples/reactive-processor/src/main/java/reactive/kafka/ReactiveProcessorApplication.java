@@ -31,9 +31,9 @@ public class ReactiveProcessorApplication {
 
 	private static final Logger LOG = LoggerFactory.getLogger(ReactiveProcessorApplication.class);
 
-	private static final double AGGREGATE_ERROR_PROP = 0.0d;
+	private static final double AGGREGATE_ERROR_PROP = 0.2d;
 	private static final double INPUT_ERROR_PROP = 0.0d;
-	private static final double OUTPUT_ERROR_PROP = 0.2d;
+	private static final double OUTPUT_ERROR_PROP = 0.0d;
 
 	private static Random RANDOM = new Random(2728726262L);
 
