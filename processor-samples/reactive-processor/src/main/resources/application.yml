@@ -50,6 +50,16 @@ spring:
                 username: guest
                 password: guest
                 virtual-host: /
+      kafka:
+        binder:
+          brokers: localhost:9092
+        bindings:
+          local_kafka:
+            consumer:
+              enable-dlq: true
+              ack-each-record: true
+            producer:
+              bufferSize: 16384
       rabbit:
         bindings:
           local_rabbit:
