@@ -19,11 +19,17 @@ import org.springframework.messaging.support.GenericMessage;
 import reactor.core.publisher.Flux;
 
 import java.time.Duration;
+import java.util.Random;
 import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicInteger;
 
 @SpringBootApplication
 @EnableBinding(Processor.class)
 public class ReactiveProcessorApplication {
+
+	private static final double OUTPUT_ERROR_PROP = 0.0d;
+
+	private static Random RANDOM = new Random(2728726262L);
 
 	public static void main(String[] args) {
 		SpringApplication.run(ReactiveProcessorApplication.class, args);
@@ -35,7 +41,12 @@ public class ReactiveProcessorApplication {
 		return inbound.
 				log()
 				.window(Duration.ofSeconds(5), Duration.ofSeconds(5))
-				.flatMap(w -> w.reduce("", (s1,s2)->s1+s2))
+				.flatMap(w -> {
+					if (RANDOM.nextDouble() < OUTPUT_ERROR_PROP) {
+						return w.error(new IllegalStateException("On " + w));
+					}
+					return w.reduce("", (s1,s2)->s1+s2);
+				})
 				.log();
 	}
 
@@ -48,11 +59,18 @@ public class ReactiveProcessorApplication {
 
 		private AtomicBoolean semaphore = new AtomicBoolean(true);
 
+		private AtomicInteger count = new AtomicInteger(0);
+
 		@Bean
 		@InboundChannelAdapter(channel = "test-source", poller = @Poller(fixedDelay = "1000"))
 		public MessageSource<String> sendTestData() {
-			return () ->
-					new GenericMessage<>(this.semaphore.getAndSet(!this.semaphore.get()) ? "foo" : "bar");
+			return () -> {
+				StringBuilder sb = new StringBuilder();
+				sb.append(this.semaphore.getAndSet(!this.semaphore.get()) ? "foo" : "bar")
+						.append(count.getAndIncrement())
+						.append(", ");
+				return new GenericMessage<>(sb.toString());
+			};
 		}
 	}
 
