@@ -52,7 +52,12 @@ public class ReactiveProcessorApplication {
 					if (simulateError) {
 						String msg = "Error: Aggregate on " + w;
 						LOG.warn(msg);
-						return w.error(new IllegalStateException(msg));
+
+						// hard error
+						throw new IllegalStateException(msg);
+						
+						// indicate error to downstream
+						// return w.error(new IllegalStateException(msg));
 					}
 					return w.reduce("", (s1,s2)->s1+s2);
 				})
