@@ -5,6 +5,9 @@ spring:
         output:
           destination: transformed
           binder: local_rabbit
+          consumer:
+            max-attempts: 3
+            # retry-template-name: whatever
         test-sink:
           destination: transformed
           binder: local_rabbit
@@ -15,8 +18,8 @@ spring:
           destination: testtock
           binder: local_rabbit
       binders:
-#        local_kafka:
-#          type: kafka
+        local_kafka:
+          type: kafka
         local_rabbit:
           type: rabbit
       rabbit:
@@ -29,7 +32,7 @@ spring:
               republish-to-dlq: true
               auto-bind-dlq: true
             producer:
-              max-length: 100
+              # max-length: 100
               batching-enabled: false
               batch-size: 100
               transacted: true
