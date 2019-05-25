@@ -29,9 +29,27 @@ spring:
         local_kafka:
           defaultCandidate: false
           type: kafka
+          environment:
+            spring:
+              kafka:
+                bootstrap-servers: localhost:9092
+                consumer:
+                  bootstrap-servers: localhost:9092
+                producer:
+                  bootstrap-servers: localhost:9092
+                listener:
+                  ack-mode: count_time
         local_rabbit:
           defaultCandidate: false
           type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: localhost
+                port: 5672
+                username: guest
+                password: guest
+                virtual-host: /
       rabbit:
         bindings:
           local_rabbit:
